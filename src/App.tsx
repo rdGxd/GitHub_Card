@@ -1,11 +1,10 @@
-import reactLogo from "./assets/react.svg";
+import { InputUser } from "./components/Input";
 
 function App() {
   return (
-    <>
-      <h1>Oi</h1>
-      <img src={reactLogo} alt="" />
-    </>
+    <div className="flex w-full h-full">
+      <InputUser />
+    </div>
   );
 }
 
