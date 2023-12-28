@@ -24,13 +24,25 @@ export const Card = () => {
       <div className="flex justify-center">
         <div className="w-10/12 h-screen rounded-xl bg-white flex justify-center items-center ">
           {data && (
-            <div className="w-10/12 h-[90%] bg-card rounded-xl justify-center content-center flex">
-              <img
-                src={data.avatar_url}
-                alt="Avatar GitHub"
-                className="w-9 h-9 rounded-xl mr-5"
-              />
-              <h1 className="">{data.login}</h1>
+            <div className="w-10/12 h-[90%] bg-card rounded-xl flex">
+              <div className="flex mt-9 ml-8 ">
+                <img
+                  src={data.avatar_url}
+                  alt="Avatar GitHub"
+                  className="w-9 h-9 rounded-full mr-5"
+                />
+                <p className="mt-2">{data.login}</p>
+              </div>
+
+              <div className="flex flex-wrap mt-10 content-center ">
+                <div className="flex  rounded-full border-8 border-img-profile w-80">
+                  <img
+                    src={data.avatar_url}
+                    alt=""
+                    className="rounded-full w-full"
+                  />
+                </div>
+              </div>
             </div>
           )}
         </div>
