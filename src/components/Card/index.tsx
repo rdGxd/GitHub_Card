@@ -23,7 +23,7 @@ export const Card = () => {
     Data();
   }, [user]);
 
-  const handleClick = () => {
+  const handleChangeBGColor = () => {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
@@ -39,30 +39,30 @@ export const Card = () => {
       </p>
       <div className="flex justify-center">
         <div
-          className="BG w-10/12 h-screen rounded-xl bg-white flex justify-center items-center "
+          className="flex items-center justify-center w-10/12 h-screen bg-white BG rounded-xl "
           ref={refBG}
         >
           {data && (
-            <div className="w-10/12 h-[90%] bg-card rounded-xl">
-              <header className="HEADER flex mt-9 ml-4">
-                <div className="rounded-full mr-3 border w-12 h-12 flex items-center justify-center">
+            <div className="w-10/12 h-[90%] bg-card rounded-xl flex flex-wrap  items-center justify-center content-center">
+              <header className="flex ml-4 HEADER mt-9">
+                <div className="flex items-center justify-center w-12 h-12 mr-3 border rounded-full">
                   <img src={logo} alt="logo" className="" />
                 </div>
                 <p className="mt-3">{data.login}</p>
               </header>
 
               <div className="IMAGE-PROFILE">
-                <div className="rounded-full border-8 border-img-profile ml-20 mt-20">
+                <div className="mt-10 border-8 rounded-full border-img-profile w-60">
                   <img src={data.avatar_url} alt="" className="rounded-full" />
                 </div>
               </div>
 
-              <div className="INFO absolute bg-gradient-to-b from-black via-gray-500 to-black ml-5 py-5 px-3 rounded-xl">
-                <div className="SEGUINDO flex">
+              <div className="absolute px-3 py-5 INFO bg-gradient-to-b from-black via-gray-500 to-black rounded-xl mt-80">
+                <div className="flex SEGUINDO">
                   <img src={seguidores} alt="" className="mr-1" />
                   <p>{data.followers} Seguidores</p>
                 </div>
-                <div className="SEGUINDO flex">
+                <div className="flex SEGUINDO">
                   <img src={seguidores} alt="" className="mr-1" />
                   <p>{data.following} Seguindo</p>
                 </div>
@@ -70,7 +70,7 @@ export const Card = () => {
                   <img src={repos} alt="" className="mr-1" />
                   <p>{data.public_repos} Repositórios</p>
                 </div>
-                <div className="Company flex">
+                <div className="flex Company">
                   <img src={company} alt="" className="mr-1" />
                   <p>{data.company ? data.company : "Não Possui"}</p>
                 </div>
@@ -80,11 +80,11 @@ export const Card = () => {
                 </div>
               </div>
 
-              <div className="mt-56 ml-24">
+              <div className="mt-56">
                 <p>Customizar o seu card</p>
                 <button
-                  className="border border-border-button bg-gray-500 rounded-xl flex p-2 ml-2"
-                  onClick={handleClick}
+                  className="flex p-2 mt-2 ml-2 bg-gray-500 border border-border-button rounded-xl"
+                  onClick={handleChangeBGColor}
                 >
                   Gerar background
                 </button>
