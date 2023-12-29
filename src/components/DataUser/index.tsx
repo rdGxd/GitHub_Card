@@ -8,8 +8,9 @@ import logo from "../../assets/Icons/logo.svg";
 import repos from "../../assets/Icons/repository.svg";
 
 import { DataProps } from "../../types/data";
+import { changeColor } from "../../utils/ChangeColor";
 
-export const Card = () => {
+export const DataUser = () => {
   const { user } = useParams();
   const refBG = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<DataProps>();
@@ -24,11 +25,8 @@ export const Card = () => {
   }, [user]);
 
   const handleChangeBGColor = () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
     if (refBG.current) {
-      refBG.current.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      changeColor(refBG.current);
     }
   };
 
@@ -52,9 +50,11 @@ export const Card = () => {
               </header>
 
               <div className="IMAGE-PROFILE">
-                <div className="mt-10 border-8 rounded-full border-img-profile w-60">
-                  <img src={data.avatar_url} alt="" className="rounded-full" />
-                </div>
+                <img
+                  src={data.avatar_url}
+                  alt=""
+                  className="mt-10 border-8 rounded-full border-img-profile w-60"
+                />
               </div>
 
               <div className="absolute px-3 py-5 INFO bg-gradient-to-b from-black via-gray-500 to-black rounded-xl mt-80">
