@@ -41,15 +41,15 @@ export const DataUser = () => {
           ref={refBG}
         >
           {data && (
-            <div className="w-10/12 h-[90%] bg-card rounded-xl flex flex-wrap  items-center justify-center content-center">
-              <header className="flex ml-4 HEADER mt-9">
+            <div className="w-10/12 md:text-lg h-[90%] bg-card rounded-xl flex flex-wrap md:items-start items-center justify-center content-center ">
+              <header className="flex ml-4 HEADER mt-9 iPhoneSE:mt-56 GalaxyS8:mt-48 md:mt-0 md:ml-0">
                 <div className="flex items-center justify-center w-12 h-12 mr-3 border rounded-full">
-                  <img src={logo} alt="logo" className="" />
+                  <img src={logo} alt="logo" />
                 </div>
                 <p className="mt-3">{data.login}</p>
               </header>
 
-              <div className="IMAGE-PROFILE">
+              <div className="flex flex-wrap mt-10 mr-50 IMAGE-PROFILE ">
                 <img
                   src={data.avatar_url}
                   alt=""
@@ -57,30 +57,34 @@ export const DataUser = () => {
                 />
               </div>
 
-              <div className="absolute px-3 py-5 INFO bg-gradient-to-b from-black via-gray-500 to-black rounded-xl mt-80">
-                <div className="flex SEGUINDO">
+              <div className="absolute w-1/2 px-3 py-5 text-center INFO bg-gradient-to-b from-black via-gray-500 to-black rounded-xl md:mt-[480px] mt-[400px]">
+                <div className="flex SEGUINDO md:items-center md:justify-center md:text-center">
                   <img src={seguidores} alt="" className="mr-1" />
                   <p>{data.followers} Seguidores</p>
                 </div>
-                <div className="flex SEGUINDO">
+
+                <div className="flex SEGUINDO md:items-center md:justify-center md:text-center">
                   <img src={seguidores} alt="" className="mr-1" />
                   <p>{data.following} Seguindo</p>
                 </div>
-                <div className="Repositórios flex">
+
+                <div className="Repositórios flex md:items-center md:justify-center md:text-center">
                   <img src={repos} alt="" className="mr-1" />
                   <p>{data.public_repos} Repositórios</p>
                 </div>
-                <div className="flex Company">
+
+                <div className="Company flex md:items-center md:justify-center md:text-center">
                   <img src={company} alt="" className="mr-1" />
                   <p>{data.company ? data.company : "Não Possui"}</p>
                 </div>
-                <div className="Localização flex">
+
+                <div className="Localização flex md:items-center md:justify-center md:text-center">
                   <img src={location} alt="" className="mr-1" />
                   <p>{data.location ? data.location : "Não Possui"}</p>
                 </div>
               </div>
 
-              <div className="mt-56">
+              <div className="iPhoneSE:mt-72 iPhoneXR:mt-[450px] iPhone12:mt-96 Pixel7:mt-[452px] GalaxyS8:mt-72 mt-64 md:mt-56">
                 <p>Customizar o seu card</p>
                 <button
                   className="flex p-2 mt-2 ml-2 bg-gray-500 border border-border-button rounded-xl"
