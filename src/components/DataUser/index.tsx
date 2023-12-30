@@ -42,22 +42,22 @@ export const DataUser = () => {
         >
           {data && (
             <div className="w-10/12 md:text-lg h-[90%] bg-card rounded-xl flex flex-wrap md:items-start items-center justify-center content-center ">
-              <header className="flex ml-4 HEADER mt-9 iPhoneSE:mt-56 GalaxyS8:mt-48 md:mt-0 md:ml-0">
+              <header className="HEADER flex ml-4 mt-9 iPhoneSE:mt-56 GalaxyS8:mt-48 md:mt-0 md:ml-0">
                 <div className="flex items-center justify-center w-12 h-12 mr-3 border rounded-full">
                   <img src={logo} alt="logo" />
                 </div>
                 <p className="mt-3">{data.login}</p>
               </header>
 
-              <div className="flex flex-wrap mt-10 mr-50 IMAGE-PROFILE ">
+              <div className="IMAGE-PROFILE flex md:justify-center mt-20 mr-50 md:mr-0 md:mt-5">
                 <img
                   src={data.avatar_url}
                   alt=""
-                  className="mt-10 border-8 rounded-full border-img-profile w-60"
+                  className="border-8 rounded-full border-img-profile w-60 md:w-1/2"
                 />
               </div>
 
-              <div className="absolute w-1/2 px-3 py-5 text-center INFO bg-gradient-to-b from-black via-gray-500 to-black rounded-xl md:mt-[480px] mt-[400px]">
+              <div className="absolute w-1/2 px-3 py-5 text-center INFO bg-gradient-to-b from-black via-gray-500 to-black rounded-xl md:mt-[485px] mt-[400px]">
                 <div className="flex SEGUINDO md:items-center md:justify-center md:text-center">
                   <img src={seguidores} alt="" className="mr-1" />
                   <p>{data.followers} Seguidores</p>
