@@ -5,7 +5,7 @@ export const InputUser = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="flex flex-wrap justify-center items-center content-center">
+    <form className="flex flex-wrap justify-center items-center content-center" name="">
       <input
         type="text"
         name="username"
@@ -16,6 +16,6 @@ export const InputUser = () => {
         ref={inputRef}
       />
       <ButtonUser inputRef={inputRef} />
-    </div>
+    </form>
   );
 };

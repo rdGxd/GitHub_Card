@@ -8,7 +8,8 @@ type ButtonUser = {
 export const ButtonUser = ({ inputRef }: ButtonUser) => {
   const navigate = useNavigate();
 
-  const handleClick = async () => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
     if (!inputRef.current?.value) {
       console.log("Campo Inválido");
       return;
@@ -19,7 +20,7 @@ export const ButtonUser = ({ inputRef }: ButtonUser) => {
 
   return (
     <button
-      type="button"
+      type="submit"
       className="ml-5 mt-5 bg-gray-500 rounded p-1"
       onClick={handleClick}
     >
