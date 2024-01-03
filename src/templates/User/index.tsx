@@ -1,4 +1,4 @@
-import { DataUser } from "../../components/User/DataUser";
+import { DataUser } from "../../components/DataUser";
 
 export const User = () => {
   return <DataUser />;

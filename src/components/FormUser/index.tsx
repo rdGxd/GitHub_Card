@@ -1,5 +1,4 @@
-import { InputUser } from "./Input";
-import { LogoGit } from "./Logo";
+import { LogoGit, InputUser } from "..";
 
 export const FormUser = () => {
   return (

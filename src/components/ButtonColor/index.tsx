@@ -1,4 +1,4 @@
-import { changeColor } from "../../../utils/ChangeColor";
+import { changeColor } from "../../utils/ChangeColor";
 
 type ButtonColor = {
   refDiv: HTMLDivElement;

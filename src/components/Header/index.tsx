@@ -1,4 +1,4 @@
-import logo from "../../../assets/Icons/logo.svg";
+import logo from "../../assets/Icons/logo.svg";
 
 type HeaderProps = {
   username: string;

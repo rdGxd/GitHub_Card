@@ -1,12 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-
-import { ButtonColor } from "../ButtonColor";
-import { Dados } from "../Dados";
-import { Header } from "../Header";
-import { ImageProfile } from "../ImageProfile";
-import { getData } from "../../../api/getData";
-import { DataProps } from "../../../types/data";
+import { Header, ImageProfile, Dados, ButtonColor } from "..";
+import { getData } from "../../api/getData";
+import { DataProps } from "../../types/data";
 
 export const DataUser = () => {
   const { user } = useParams();

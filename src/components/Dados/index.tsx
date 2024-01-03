@@ -1,7 +1,7 @@
-import seguidores from "../../../assets/Icons/Seguidores.svg";
-import empresa from "../../../assets/Icons/company.svg";
-import localizacao from "../../../assets/Icons/location.svg";
-import repos from "../../../assets/Icons/repository.svg";
+import seguidores from "../../assets/Icons/Seguidores.svg";
+import empresa from "../../assets/Icons/company.svg";
+import localizacao from "../../assets/Icons/location.svg";
+import repos from "../../assets/Icons/repository.svg";
 
 type DadosProps = {
   followers: number;

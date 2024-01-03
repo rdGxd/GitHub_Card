@@ -1,11 +1,14 @@
 import { useRef } from "react";
-import { ButtonUser } from "../Button";
+import { ButtonUser } from "..";
 
 export const InputUser = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <form className="flex flex-wrap justify-center items-center content-center" name="">
+    <form
+      className="flex flex-wrap justify-center items-center content-center"
+      name=""
+    >
       <input
         type="text"
         name="username"
